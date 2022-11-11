@@ -24,6 +24,6 @@ void    ft_putnbr_fd(int    n, int fd)
     }
     else
     {
-        write(fd, &(nb + '0', 1);
+        write(fd, &(n + '0'), 1);
     }
 }
