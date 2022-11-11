@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 21:15:20 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/11 21:15:20 by mwubneh          ###   ########.fr       */
+/*   Created: 2022/11/11 21:54:01 by mwubneh           #+#    #+#             */
+/*   Updated: 2022/11/11 21:54:01 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void   ft_putstr_fd(char    *s, int fd)
+void    ft_putnbr_fd(int    n, int fd)
 {
     int i;
 
     i = 0;
-    while(s[i])
-        write(fd, &s[i++], 1);
+    if(n < 0 )
+    {
+        write (fd, '-', 1);
+        n *= -1;
+    }
+    if (10 <= n)
+    {
+        ft_putnbr_fd((n / 10), fd);
+        ft_putnbr_fd((n % 10), fd);
+    }
+    else
+    {
+        write(fd, &(nb + '0', 1);
+    }
 }
