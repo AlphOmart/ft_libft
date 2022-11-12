@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 13:43:56 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 13:52:35 by mwubneh          ###   ########lyon.fr   */
+/*   Created: 2022/11/12 13:53:37 by mwubneh           #+#    #+#             */
+/*   Updated: 2022/11/12 14:01:46 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	char	*dst2;
-	char	*src2;
+	int				i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	dst2 = (char *) dst;
-	src2 = (char *)src;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
 	while (i <= n)
-		dst2[i] = src2[i++];
-	return	(dst);
+	{
+		if (str1[i] == str2[i])
+			i++;
+		else
+			return (str1[i] - str2[i]);
+	}
+	return (0);
 }
