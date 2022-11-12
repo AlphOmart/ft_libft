@@ -6,7 +6,7 @@
 #    By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/11/12 16:28:04 by mwubneh          ###   ########lyon.fr    #
+#    Updated: 2022/11/12 16:56:34 by mwubneh          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ SRC_PART = 	./ft_isalpha.c\
 
 OBJ_PART = $(SRC_PART:.c=.o)
 
-all: $(NAME)
+all: $(NAME) clean
 
 $(NAME):
 	$(CC) $(FLAGS) $(SRC_PART)
@@ -64,5 +64,5 @@ clean:
 fclean: clean
 	rm $(NAME)
 
-re:fclean all
+re: fclean all
 
