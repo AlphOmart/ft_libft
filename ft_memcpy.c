@@ -6,11 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 13:43:56 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:14:52 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:52 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_memcpy(void *dst, const void *src, size_t n)
 {

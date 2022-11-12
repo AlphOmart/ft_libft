@@ -6,11 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 18:42:44 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 12:35:02 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:54 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*memchr(const void *s, int c, size_t n)
 {

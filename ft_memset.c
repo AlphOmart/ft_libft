@@ -6,11 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:59:03 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 12:27:05 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:51 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void	*b, int c, size_t len)
 {

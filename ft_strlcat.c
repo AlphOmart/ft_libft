@@ -6,9 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:05:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:18:31 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:30 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 unsigned int	ft_strlcat( char	*src, char	*dst, unsigned int n)
 {

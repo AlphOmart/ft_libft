@@ -6,9 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:13:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:22:28 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:44 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char	*s, int c)
 {

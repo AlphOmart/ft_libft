@@ -6,11 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 20:10:31 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:28:23 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:45 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*strdup(const char *s1)
 {

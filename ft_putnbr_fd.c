@@ -6,9 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:54:01 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 12:40:10 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:47 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 18:10:29 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 12:38:05 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:58 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

@@ -6,9 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:28:16 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:19:41 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:32:40 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
