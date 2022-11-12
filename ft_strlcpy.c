@@ -6,11 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:44:21 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/08 13:03:29 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:17:51 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char	*src,	char	*dst, unsigned int n)
+unsigned int	ft_strlcpy(char	*dst, char	*src, unsigned int n)
 {
 	int	i;
 
