@@ -6,7 +6,7 @@
 #    By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/11/12 16:22:28 by mwubneh          ###   ########lyon.fr    #
+#    Updated: 2022/11/12 16:28:04 by mwubneh          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ $(NAME):
 	ar -r $(NAME) $(OBJ_PART)
 
 clean:
-	rm -f $(SRC_PART)
+	rm -f $(OBJ_PART)
 
 fclean: clean
 	rm $(NAME)

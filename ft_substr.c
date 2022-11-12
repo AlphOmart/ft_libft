@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 22:45:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:32:39 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:52:32 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (len)
 	{
-		s2[i++] = s[start + i];
+		s2[i] = s[start + i];
 		len--;
+		i++;
 	}
-	return (&s2);
+	return (s2);
 }

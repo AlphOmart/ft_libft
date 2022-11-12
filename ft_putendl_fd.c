@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:09:33 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:32:48 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:33:37 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_putendl(char *s, int fd)
 	i = 0;
 	while (s[i])
 		write(fd, &s[i++], 1);
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

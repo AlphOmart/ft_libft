@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:05:12 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:32:30 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:40:07 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 unsigned int	ft_strlcat( char	*src, char	*dst, unsigned int n)
 {
-	int	i;
-	int	a;
+	unsigned int	i;
+	unsigned int	a;
 
 	i = 0;
 	a = 0;
 	while (dst[i])
 		i++;
 	while (src[i] && a < n -1)
-		dst[i + a] = src[a++];
+	{
+		dst[i + a] = src[a];
+		a++;
+	}
 	if (a == 1)
 		dst[i + a] = '\0';
 	return (a + i);

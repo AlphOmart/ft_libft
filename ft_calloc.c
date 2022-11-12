@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 18:10:29 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:32:58 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:27:26 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if (nmemb == 0 || size == 0)

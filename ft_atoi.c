@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:12:24 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:33:01 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:24:43 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	nbr = 0;
 	i = 0;
-	while (str[i] == 32 || 9 <= str[i] && str[i] <= 13)
+	while (str[i] == 32 || (9 <= str[i] && str[i] <= 13))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

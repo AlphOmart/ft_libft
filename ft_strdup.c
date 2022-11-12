@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 20:10:31 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:32:45 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:37:24 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ char	*strdup(const char *s1)
 	i = 0;
 	while (s1[size])
 		size++;
-	str = malloc(size * sizeof(char));
+	str = malloc(size * sizeof(char) + 1);
 	if (str == NULL)
 		return (str);
-	while (str[i])
-		str[i] = s1[i++];
+	while (str[i++])
+		str[i] = s1[i];
 	str[i] = '\0';
 	return (str);
 }

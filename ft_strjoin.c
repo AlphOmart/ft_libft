@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:44:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:53:59 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:39:19 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (s3);
 	i = 0;
 	j = 0;
-	while (s1[j])
-		s3[j] = s1[j++];
-	while (s2[i])
-		s3[j + i] = s2[i++];
-	s3[j + i] = '/0';
+	while (s1[j++])
+		s3[j] = s1[j];
+	while (s2[i++])
+		s3[j + i] = s2[i];
+	s3[j + i] = '\0';
 	return (s3);
 }

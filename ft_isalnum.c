@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:41:01 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 15:14:32 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 16:27:56 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isdigit( int c)
 
 int	ft_isalpha( int b)
 {
-	if ('a' <= b && b <= 'z' || 'A' <= b && b <= 'Z')
+	if (('a' <= b && b <= 'z') || ('A' <= b && b <= 'Z'))
 		return (1);
 	else
 		return (0);
