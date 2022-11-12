@@ -6,7 +6,7 @@
 #    By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/11/12 14:41:48 by mwubneh          ###   ########lyon.fr    #
+#    Updated: 2022/11/12 15:13:39 by mwubneh          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,13 +50,13 @@ SRC_PART = 	./ft_isalpha.c\
 			./ft_putendl_fd.c\
 			./ft_putnbr_fd.c
 
-%.o:%.c
-	$(CC) $(FLAGS) -o $@ $<
-
-$(SRC_PART)%.o : $(SRC_PART)%.c
-	$(CC) $(SRC_PART) $(FLAGS)
+OBJ_PART = $(SRC_PART:.c=.o)
 
 all : $(NAME)
+
+$(NAME):
+	$(CC) $(FLAGS) $(SRC_PART)
+	ar -r $(NAME) $(OBJ_PART)
 
 clean :
 	rm -f &(SRC_PART)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_alnum.c                                         :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:41:01 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:33:02 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 15:14:32 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_isalpha( int b)
 		return (0);
 }
 
-int	ft_alnum(int a)
+int	ft_isalnum(int a)
 {
 	if (ft_isalpha(a) == 1 && ft_isdigit(a) == 1)
 		return (1);
