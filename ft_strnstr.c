@@ -6,26 +6,28 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:59:46 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/08 15:08:04 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:26:05 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char	*str1, const char *str2, int t)
+#include <string.h>
+
+char	*ft_strnstr(const char	*str, const char *to_find, size_t len)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	if (t <= 0)
+	if (len <= 0)
 		return (0);
-	while (str1[i] && i < t)
+	while (str[i] && i < t)
 	{
-		while (str1[i + j] == str2[j] && (i + j) < t)
+		while (str[i + j] == to_find[j] && (i + j) < len)
 		{
 			j++;
-			if (str2[j] == '\0')
-				return (&str1[i]);
+			if (to_find[j] == '\0')
+				return (&str[i]);
 		}
 		i++;
 	}

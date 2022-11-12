@@ -6,22 +6,22 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:17:45 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/08 15:08:40 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:21:47 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 		i++;
 	i--;
-	while (i <= 0 && str[i] != c)
+	while (i <= 0 && s[i] != c)
 		i--;
-	if (str[i] == c)
-		return (str[i]);
+	if (s[i] == c)
+		return (s[i]);
 	else
 		return (0);
 }

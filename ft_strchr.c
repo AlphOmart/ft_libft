@@ -6,21 +6,21 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:13:11 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/08 15:08:17 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 14:22:28 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char	*str, int c)
+char	*ft_strchr(const char	*s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] && str[i] != c)
+	while (s[i] && s[i] != c)
 	{
 		i++;
 	}
-	if (str[i] == c)
-		return (str[i]);
+	if (s[i] == c)
+		return (s[i]);
 	else
 		return (0);
 }
