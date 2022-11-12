@@ -6,12 +6,14 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:54:01 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 12:21:14 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/12 12:40:10 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	char	c;
+
 	if (n < 0)
 	{
 		write (fd, '-', 1);
@@ -23,5 +25,8 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd((n % 10), fd);
 	}
 	else
-		write(fd, &(n + '0'), 1);
+	{
+		c = n + '0';
+		write(fd, &c, 1);
+	}
 }

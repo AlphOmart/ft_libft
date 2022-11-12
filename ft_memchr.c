@@ -6,19 +6,23 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 18:42:44 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/11 18:42:44 by mwubneh          ###   ########.fr       */
+/*   Updated: 2022/11/12 12:35:02 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *memchr(const void  *s, int c, size_t   n)
-{
-    int i;
+#include <string.h>
 
-    i = 0;
-    while(i <= n && s[i] != c)
-        i++;
-    if (s[i] == c)
-        return(s[i]);
-    else
-        return(0);
+void	*memchr(const void *s, int c, size_t n)
+{
+	int		i;
+	char	*s2;
+
+	i = 0;
+	s2 = (char *) s;
+	while (i <= n && s2[i] != c)
+		i++;
+	if (s2[i] == c)
+		return (s2[i]);
+	else
+		return (0);
 }
