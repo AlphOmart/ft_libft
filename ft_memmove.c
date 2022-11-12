@@ -6,16 +6,16 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 18:30:00 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/11 18:30:00 by mwubneh          ###   ########.fr       */
+/*   Updated: 2022/11/12 12:08:44 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memmove(void    *dest, const void   *src, size_t    n)
+void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < n)
-        (char *) dest[i] = (char *) src[i++];
-    return (dest);
+	i = 0;
+	while (i < n)
+		(char *) dest[i] = (char *) src[i++];
+	return (dest);
 }

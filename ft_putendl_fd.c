@@ -6,16 +6,16 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:09:33 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/11 21:09:33 by mwubneh          ###   ########.fr       */
+/*   Updated: 2022/11/12 12:09:56 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putendl(char *s, int fd)
+void	ft_putendl(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(s[i])
-        write(fd, &s[i++], 1);
-    write(fd, '\n', 1);
+	i = 0;
+	while (s[i])
+		write(fd, &s[i++], 1);
+	write(fd, '\n', 1);
 }

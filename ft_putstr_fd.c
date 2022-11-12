@@ -6,15 +6,15 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:15:20 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/11 21:15:20 by mwubneh          ###   ########.fr       */
+/*   Updated: 2022/11/12 12:11:52 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void   ft_putstr_fd(char    *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(s[i])
-        write(fd, &s[i++], 1);
+	i = 0;
+	while (s[i])
+		write (fd, &s[i++], 1);
 }

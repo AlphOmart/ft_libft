@@ -6,11 +6,11 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:37:05 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/11 20:37:05 by mwubneh          ###   ########.fr       */
+/*   Updated: 2022/11/12 12:09:19 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putchar_fd(char  c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
