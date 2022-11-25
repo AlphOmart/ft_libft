@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:59:46 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 16:48:06 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 23:34:39 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 char	*ft_strnstr(const char	*str, const char *to_find, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	char	*strcpy;
+	int	i;
 
-	i = 0;
-	j = 0;
-	strcpy = (char *) str;
-	if (len <= 0)
-		return (0);
-	while (str[i] && i < len)
+	if (len < 0)
+		return (NULL);
+	if (*to_find == '\0')
+		return ((char *)str);
+	while (0 < len && *str)
 	{
-		while (str[i + j] == to_find[j] && (i + j) < len)
+		i = 0;
+		while (str[i] == to_find[i] && to_find[i])
 		{
-			j++;
-			if (to_find[j] == '\0')
-			{
-				strcpy[0] = str[i];
-				return (strcpy);
-			}
+			if (len - i == 0)
+				return (NULL);
+			i++;
 		}
-		i++;
+		if (to_find[i] == '\0')
+			return ((char *)str);
+		str++;
+		len--;
 	}
-	return (0);
+	return (NULL);
 }
