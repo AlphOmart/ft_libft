@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:31:56 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 16:26:02 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 15:08:17 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_bzero(void	*s, size_t n)
 
 	i = 0;
 	while (i < n)
-		((char *)s)[i++] = '0';
+		((char *)s)[i++] = '\0';
 }
