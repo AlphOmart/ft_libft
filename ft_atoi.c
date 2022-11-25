@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:12:24 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 16:24:43 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 20:00:03 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	nbr;
-	int	i;
+	int		sign;
+	size_t	nbr;
+	int		i;
 
 	sign = 1;
 	nbr = 0;
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	while ('0' <= str[i] && str[i] <= '9')
 	{
-		nbr = nbr * 10 + str[i] - '\0';
+		nbr = nbr * 10 + (str[i] - '0');
 		i++;
 	}
 	return (sign * nbr);
