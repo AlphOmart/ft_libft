@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:54:01 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/25 12:28:31 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 12:42:16 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_putnbr_fd(int n, int fd)
 
 	if (n == -2147483648)
 	{
-		write(1, '-2147483648', 11);
-		return (0);
+		write(1, "-2147483648", 11);
+		return ;
 	}
 	if (n < 0)
 	{
@@ -36,4 +36,5 @@ void	ft_putnbr_fd(int n, int fd)
 		c = n + '0';
 		write(fd, &c, 1);
 	}
+	return ;
 }

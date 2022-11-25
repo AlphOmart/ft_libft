@@ -6,15 +6,15 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 21:15:20 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 14:32:46 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 12:39:30 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *str, int fd)
 {
-	if (s == NULL)
-		return (0);
-	write(fd, s, ft_strlen(s));
+	if (str == NULL)
+		return ;
+	write(fd, str, ft_strlen(str));
 }
