@@ -6,12 +6,12 @@
 #    By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/11/12 16:56:34 by mwubneh          ###   ########lyon.fr    #
+#    Updated: 2022/11/25 14:42:11 by mwubneh          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc -c
+CC = cc
 FLAGS = -Wall -Werror -Wextra
 HDRS = libft.h
 
@@ -52,17 +52,22 @@ SRC_PART = 	./ft_isalpha.c\
 
 OBJ_PART = $(SRC_PART:.c=.o)
 
-all: $(NAME) clean
 
-$(NAME):
-	$(CC) $(FLAGS) $(SRC_PART)
-	ar -r $(NAME) $(OBJ_PART)
+
+all: $(NAME)
+
+$(NAME):	$(OBJ_PART)
+	ar -rcs $(NAME) $(OBJ_PART)
+
+%.o : %.c $(HDRS)
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ_PART)
+	rm -rf $(OBJ_PART)
 
 fclean: clean
-	rm $(NAME)
+	rm -rf $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
 
+.PHONY: clean fclean re
