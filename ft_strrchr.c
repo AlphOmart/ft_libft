@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:17:45 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 16:51:48 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 18:34:51 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,15 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
-	char	*scpy;
 
-	i = 0;
-	scpy = (char *)s;
-	while (s[i])
-		i++;
-	i--;
-	while (0 <= i && *scpy != c)
+	if (!s)
+		return (NULL);
+	i = ft_strlen(s);
+	while (0 <= i)
 	{
+		if (s[i] == (char) c)
+			return (&((char *)s)[i]);
 		i--;
-		scpy--;
 	}
-	if (scpy[i] == c)
-		return (scpy);
-	else
-		return (0);
+	return (NULL);
 }
