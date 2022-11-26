@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 02:11:41 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/26 03:00:49 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/26 05:59:25 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	if (*s1 == '\0')
-		return (calloc(1, sizeof(char )));
+		return (calloc(2, sizeof(char )));
 	s1cpy = s1;
 	while (*s1)
 		s1++;
