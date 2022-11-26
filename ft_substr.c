@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 22:45:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/26 05:35:23 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/26 06:59:26 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = ft_strlen(s);
 	if (i <= start)
 		return (str);
-	ft_strlcpy(str, &s[start], len + 1);
+	if (start < i)
+		ft_strlcpy(str, &s[start], i - len + 1);
 	return (str);
 }
