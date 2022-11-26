@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:44:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/12 16:39:19 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/11/26 01:06:54 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,25 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
+	size_t	j;
+	size_t	i;
+	size_t	len_s3;
 	char	*s3;
 
-	i = ft_strlen(s1) + ft_strlen(s2);
-	s3 = malloc(sizeof(char) * i);
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	if (s1 == NULL)
+		return (ft_strdup(s2));
+	if (s2 == NULL)
+		return (ft_strdup(s1));
+	i = ft_strlen((char *)s1);
+	j = ft_strlen((char *)s2);
+	len_s3 = i + j + 4;
+	s3 = malloc(len_s3);
 	if (s3 == NULL)
 		return (s3);
-	i = 0;
-	j = 0;
-	while (s1[j++])
-		s3[j] = s1[j];
-	while (s2[i++])
-		s3[j + i] = s2[i];
-	s3[j + i] = '\0';
+	ft_bzero(s3, len_s3);
+	ft_strlcpy(s3, s1, len_s3);
+	ft_strlcpy(s3 + i, s2, len_s3 - i);
 	return (s3);
 }
