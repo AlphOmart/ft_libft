@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 02:11:41 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/26 06:08:42 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/12/03 01:40:36 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	const char	*s1cpy;
+	char	*s1cpy;
+	int		i;
+	int		j;
+	int		k;
 
 	if (set == NULL || s1 == NULL)
 		return (ft_strdup(s1));
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	if (*s1 == '\0')
-		return (calloc(1, sizeof(char *)));
-	s1cpy = s1;
-	while (*s1)
-		s1++;
-	s1--;
-	while (ft_strchr(set, *s1))
-		s1--;
-	return (ft_substr(s1cpy, 0, s1 - s1cpy + 1));
+	i = 0;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	j = ft_strlen(s1);
+	while (i < j && ft_strchr(set, s1[j]))
+		j--;
+	s1cpy = malloc(sizeof(char) * (j - i + 2));
+	if (s1cpy == NULL)
+		return (NULL);
+	k = -1;
+	while (++k < j - i + 1)
+		s1cpy[k] = s1[i + k];
+	s1cpy[k] = 0;
+	return (s1cpy);
 }
