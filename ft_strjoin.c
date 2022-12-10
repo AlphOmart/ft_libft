@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:44:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/11/26 01:06:54 by mwubneh          ###   ########lyon.fr   */
+/*   Updated: 2022/12/10 14:04:26 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup(s1));
 	i = ft_strlen((char *)s1);
 	j = ft_strlen((char *)s2);
-	len_s3 = i + j + 4;
+	len_s3 = i + j + 1;
 	s3 = malloc(len_s3);
 	if (s3 == NULL)
 		return (s3);

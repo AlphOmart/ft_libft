@@ -6,7 +6,7 @@
 /*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 22:45:51 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/12/02 10:29:31 by mwubneh          ###   ########.fr       */
+/*   Updated: 2022/12/10 14:02:16 by mwubneh          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = ft_strlen(s);
-	if (i < len)
-		len = i + 1;
+	if (i - start < len)
+		len = i - start;
 	if (s == NULL)
 		return (NULL);
 	if (i <= start)
