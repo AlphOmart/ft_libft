@@ -6,7 +6,7 @@
 #    By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/11/25 14:42:11 by mwubneh          ###   ########lyon.fr    #
+#    Updated: 2022/12/10 15:08:59 by mwubneh          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,4 +70,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: clean fclean re
+.PHONY: all clean fclean re
