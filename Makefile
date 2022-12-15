@@ -6,7 +6,7 @@
 #    By: alphom <alphom@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/12/14 15:36:22 by alphom           ###   ########.fr        #
+#    Updated: 2022/12/14 15:40:40 by alphom           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,25 +65,25 @@ SRC_BONUS = ./ft_lstnew.c\
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
-all: $(NAME)
+all: $(NAME) $(NAME_BONUS)
 
 bonus : $(NAME_BONUS)
 
 $(NAME):	$(OBJ_SRC) 
 	ar -rcs $(NAME) $(OBJ_SRC)
 
-%.o : %.c $(HDRS)
-	$(CC) $(FLAGS) -c $< -o $@
-
 $(NAME_BONUS): $(OBJ_BONUS)
 	ar -rcs $(NAME_BONUS) $(OBJ_BONUS)
+
+%.o : %.c $(HDRS)
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_SRC) $(OBJ_BONUS)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) $(NAME_BONUS)
 
-re: fclean $(NAME)
+re: fclean $(NAME) $(NAME_BONUS)
 
 .PHONY: all clean fclean re
