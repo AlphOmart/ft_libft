@@ -6,7 +6,7 @@
 #    By: alphom <alphom@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/12/17 17:57:03 by alphom           ###   ########.fr        #
+#    Updated: 2022/12/17 18:01:24 by alphom           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,6 @@ fclean: clean
 re: fclean $(NAME) 
 
 bonus:			$(OBJ_SRC) $(OBJ_BONUS)
-				ar rcs $(NAME) $(OBJS) $(OBJ_BONUS)
+				ar -rcs $(NAME) $(OBJ_SRC) $(OBJ_BONUS)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
