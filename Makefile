@@ -6,12 +6,11 @@
 #    By: alphom <alphom@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/12/14 15:40:40 by alphom           ###   ########.fr        #
+#    Updated: 2022/12/17 17:57:03 by alphom           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-NAME_BONUS = libft_bonus.a
 CC = cc
 FLAGS = -Wall -Werror -Wextra
 HDRS = libft.h
@@ -53,27 +52,23 @@ SRC_PART = 	./ft_isalpha.c\
 
 OBJ_SRC = $(SRC_PART:.c=.o)
 
-SRC_BONUS = ./ft_lstnew.c\
+BONUS	=	./ft_lstadd_back.c\
 			./ft_lstadd_front.c\
-			./ft_lstsize.c\
-			./ft_lstlast.c\
-			./ft_lstadd_back.c\
-			./ft_lstdelone.c\
 			./ft_lstclear.c\
+			./ft_lstdelone.c\
 			./ft_lstiter.c\
-			./ft_lstmap.c
+			./ft_lstlast.c \
+			./ft_lstmap.c\
+			./ft_lstnew.c\
+			./ft_lstsize.c
 
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
+OBJ_BONUS	= $(BONUS:.c=.o)
 
-all: $(NAME) $(NAME_BONUS)
+all: $(NAME)
 
-bonus : $(NAME_BONUS)
 
 $(NAME):	$(OBJ_SRC) 
 	ar -rcs $(NAME) $(OBJ_SRC)
-
-$(NAME_BONUS): $(OBJ_BONUS)
-	ar -rcs $(NAME_BONUS) $(OBJ_BONUS)
 
 %.o : %.c $(HDRS)
 	$(CC) $(FLAGS) -c $< -o $@
@@ -82,8 +77,11 @@ clean:
 	rm -rf $(OBJ_SRC) $(OBJ_BONUS)
 
 fclean: clean
-	rm -rf $(NAME) $(NAME_BONUS)
+	rm -rf $(NAME)
+	
+re: fclean $(NAME) 
 
-re: fclean $(NAME) $(NAME_BONUS)
+bonus:			$(OBJ_SRC) $(OBJ_BONUS)
+				ar rcs $(NAME) $(OBJS) $(OBJ_BONUS)
 
 .PHONY: all clean fclean re
