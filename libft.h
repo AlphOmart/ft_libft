@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alphom <alphom@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 11:38:10 by mwubneh           #+#    #+#             */
-/*   Updated: 2022/12/14 15:30:21 by alphom           ###   ########.fr       */
+/*   Created: 2022/12/17 18:14:34 by mwubneh           #+#    #+#             */
+/*   Updated: 2022/12/17 18:15:02 by mwubneh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
 
 typedef struct s_list
 {
