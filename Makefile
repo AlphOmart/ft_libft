@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mwubneh <mwubneh@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: alphom <alphom@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:59:41 by mwubneh           #+#    #+#              #
-#    Updated: 2022/12/10 15:08:59 by mwubneh          ###   ########lyon.fr    #
+#    Updated: 2022/12/17 18:01:24 by alphom           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,24 +50,38 @@ SRC_PART = 	./ft_isalpha.c\
 			./ft_putendl_fd.c\
 			./ft_putnbr_fd.c
 
-OBJ_PART = $(SRC_PART:.c=.o)
+OBJ_SRC = $(SRC_PART:.c=.o)
 
+BONUS	=	./ft_lstadd_back.c\
+			./ft_lstadd_front.c\
+			./ft_lstclear.c\
+			./ft_lstdelone.c\
+			./ft_lstiter.c\
+			./ft_lstlast.c \
+			./ft_lstmap.c\
+			./ft_lstnew.c\
+			./ft_lstsize.c
 
+OBJ_BONUS	= $(BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):	$(OBJ_PART)
-	ar -rcs $(NAME) $(OBJ_PART)
+
+$(NAME):	$(OBJ_SRC) 
+	ar -rcs $(NAME) $(OBJ_SRC)
 
 %.o : %.c $(HDRS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_PART)
+	rm -rf $(OBJ_SRC) $(OBJ_BONUS)
 
 fclean: clean
 	rm -rf $(NAME)
+	
+re: fclean $(NAME) 
 
-re: fclean $(NAME)
+bonus:			$(OBJ_SRC) $(OBJ_BONUS)
+				ar -rcs $(NAME) $(OBJ_SRC) $(OBJ_BONUS)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
